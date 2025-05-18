@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
@@ -47,4 +48,90 @@ canvas {
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .logo-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+/* Smooth fade-in */
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+body.loaded {
+    opacity: 1;
+}
+
+/* Preloader styling */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinner {
+    border: 6px solid #333;
+    border-top: 6px solid #ff6600;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ninja mode styles */
+body.ninja-mode {
+    background-color: #1a1a1a;
+}
+body.ninja-mode .title {
+    color: crimson;
+}
+body.ninja-mode .logo-circle {
+    filter: hue-rotate(180deg);
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #111;
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 20;
+}
+.navbar button {
+    background: crimson;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.navbar button:hover {
+    background: orangered;
+}
+
+/* Logo hover animation */
+.logo-circle:hover {
+    transform: scale(1.05) rotate(2deg);
+    transition: transform 0.3s ease;
 }
