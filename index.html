@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <title>🥷 NinjaIT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAzUlEQVR4nO3bsW1DMQwAUTHwEh4pe2AAxqQQfdRG5K48ncshyVQQDBvZdLmWL0/j3L8vMtx3Ef+EZ+9F4jwMBgMBoPAwGAwGg8DAQH8wDXSmQ+SmS7tIZ8q9pXy3VHHlJfs6n+yCfVX9pV8o3tVR0d4O/H1A2qOTuP1l0C4uGyEmE55GQiJx0RkIiceEZCIj4RxIhIcEYSEhxRhISHEGEhIYUYSEhwRhIiPHyTrgNjzCB4vFgMBoPAwGAwGg8DAbf4AWi4NmtWX0BMAAAAASUVORK5CYII=" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="preloader"><div class="spinner"></div></div>
-
-    <div class="navbar">
-        <button onclick="toggleNinjaMode()">Toggle Ninja Mode</button>
-    </div>
 
     <div class="logo-container">
         <img src="logo.png" alt="Ninja Logo" class="logo-circle">
@@ -23,16 +19,10 @@
     <canvas id="snow"></canvas>
     <script src="snow.js"></script>
     <script>
-        // Preloader
         window.addEventListener('load', function() {
             document.getElementById('preloader').style.display = 'none';
             document.body.classList.add('loaded');
         });
-
-        // Toggle Ninja Mode
-        function toggleNinjaMode() {
-            document.body.classList.toggle('ninja-mode');
-        }
     </script>
 </body>
 </html>
