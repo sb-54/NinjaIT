@@ -4,14 +4,13 @@ body {
     background-color: #000;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
-    height: 100vh;
+}
+.logo-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.logo-container {
     text-align: center;
     position: relative;
     z-index: 10;
@@ -47,6 +46,53 @@ canvas {
     left: 0;
     z-index: 1;
 }
+#services, #contact {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 60px 20px 80px;
+}
+#services h2, #contact h2 {
+    font-family: 'Pacifico', cursive;
+    color: #ff6600;
+    font-size: 28px;
+    margin: 0 0 24px;
+}
+.services-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 480px;
+}
+.services-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #222;
+}
+.services-list li:last-child {
+    border-bottom: none;
+}
+.service-name {
+    display: block;
+    font-weight: 600;
+}
+.service-desc {
+    display: block;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 4px;
+}
+#contact a {
+    color: #ff6600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 16px;
+    font-size: 18px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+#contact a:hover, #contact a:focus-visible {
+    border-color: #ff6600;
+}
 @media (max-width: 600px) {
     .logo-circle {
         width: 160px;
@@ -54,5 +100,8 @@ canvas {
     }
     .title {
         font-size: 24px;
+    }
+    #services, #contact {
+        padding: 40px 20px 60px;
     }
 }
